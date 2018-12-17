@@ -8,6 +8,14 @@ public class Revolver {
 	private int posicionBala;	//numero que se genera automaticamente
 	
 	/*
+	 * CONSTRUCTOR 
+	 */
+	
+	//constructor por defecto
+	
+	
+	
+	/*
 	 * METO2
 	 */
 	
