@@ -4,15 +4,17 @@ public class Revolver {
 	/*
 	 * ATRIBUTOS
 	 */
-	private int posicionTambor; //numero que se genera automaticamente muestra en que posicion esta el tambor del revolver
-	private int posicionBala;	//numero que se genera automaticamente
+	private static int posicionTambor; //numero que se genera automaticamente muestra en que posicion esta el tambor del revolver
+	private static int posicionBala;	//numero que se genera automaticamente
 	
 	/*
 	 * CONSTRUCTOR 
 	 */
 	
-	//constructor por defecto
-	
+	public Revolver() {
+		posicionTambor = (int)Math.random()*6+1;
+		posicionBala = (int)Math.random()*6+1;
+	}
 	
 	
 	/*
@@ -20,7 +22,7 @@ public class Revolver {
 	 */
 	
 	//metodo que devuelve true si la bala coincide con la posicion actual de la bala
-	private boolean disparar(int posicionTambor, int posicionBala) {
+	public boolean disparar() {
 		
 		boolean disparo = true;
 		
@@ -29,13 +31,19 @@ public class Revolver {
 		}else {
 			disparo = true;
 		}
+		
+		siguienteBala();
 			
 		return disparo;
 	}
 	
 	//metodo que cambia la posicion del tambor del revolver
-	private static void siguienteBala(int posicionTambor) {
-		posicionTambor = posicionTambor++;
+	public void siguienteBala() {
+		if(posicionTambor == 6) {
+			posicionTambor = 1;
+		}else {
+			posicionTambor++;
+		}
 	}
 	
 	
