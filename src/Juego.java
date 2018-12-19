@@ -77,6 +77,7 @@ public class Juego {
 		for(int i= 0; i< jugadores.length; i++) {
 			if(!jugadores[i].isVivo()) {
 				fin = true;
+				
 			}
 		}
 			return fin;
