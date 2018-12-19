@@ -24,12 +24,10 @@ public class Revolver {
 	//metodo que devuelve true si la bala coincide con la posicion actual de la bala
 	public boolean disparar() {
 		
-		boolean disparo = true;
+		boolean disparo = false;
 		
-		if(posicionTambor != posicionBala) {
-			 disparo = false;
-		}else {
-			disparo = true;
+		if(posicionTambor == posicionBala) {
+			 disparo = true;
 		}
 		
 		siguienteBala();
