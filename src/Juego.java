@@ -68,11 +68,18 @@ public class Juego {
 	public void ronda() {
 		for(int i= 0; i<jugadores.length; i++) {
 			jugadores[i].disparar(revolver);
-			
-			if(!jugadores[i].estaVivo()) {
-				return;
+		}
+	}
+	
+	
+	public boolean finJuego() {
+		boolean fin = false;
+		for(int i= 0; i< jugadores.length; i++) {
+			if(!jugadores[i].isVivo()) {
+				fin = true;
 			}
 		}
+			return fin;
 	}
 	
 	
